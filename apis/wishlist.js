@@ -5,7 +5,12 @@ const router = Router();
 
 router.get('/wishlist',function(request,response){
     response.send({
-        categories:mockData.categories
+        categories:mockData.categories.map(category => {
+            return {
+                id:category.id,
+                name:category.name
+            };
+        })
     });
 });
 

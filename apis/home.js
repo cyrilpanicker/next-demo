@@ -5,7 +5,12 @@ const router = Router();
 
 router.get('/home',function(request,response){
     response.send({
-        categories:mockData.categories,
+        categories:mockData.categories.map(category => {
+            return {
+                id:category.id,
+                name:category.name
+            };
+        }),
         images:mockData.sliderImages
     });
 });

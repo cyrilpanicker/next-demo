@@ -1,9 +1,109 @@
 {
     "categories":[
-        {"id":"shirts","name":"Shirts"},
-        {"id":"jeans","name":"Jeans"},
-        {"id":"tshirts","name":"T-Shirts"},
-        {"id":"shorts","name":"Shorts"}
+        {
+            "id":"shirts",
+            "name":"Shirts",
+            "products":[
+                {
+                    "id":"shirt-a",
+                    "name":"Shirt A",
+                    "image":"https://bonobos-prod-s3.imgix.net/products/45214/original/Tops_Casual_Shirts_19315_MTX71_category.jpg?auto=format%2Ccompress&dpr=1&q=75&crop=false&fit=clip&w=200&h=1"
+                },
+                {
+                    "id":"shirt-b",
+                    "name":"Shirt B",
+                    "image":"https://bonobos-prod-s3.imgix.net/products/45261/original/Tops_Casual_Shirts_18999_MTX36_hero1.jpg?auto=format%2Ccompress&dpr=1&q=75&crop=false&fit=clip&w=200&h=1"
+                },
+                {
+                    "id":"shirt-c",
+                    "name":"Shirt C",
+                    "image":"https://ae01.alicdn.com/kf/HTB1evC_SFXXXXcsXFXXq6xXFXXX6/Men-Shirts-Fit-Mens-Dress-Plaid-Shirts-Male-Clothes-Social-Casual-Shirt-Men-Brand-Chemise-Homme.jpg_200x200.jpg"
+                },
+                {
+                    "id":"shirt-d",
+                    "name":"Shirt D",
+                    "image":"https://img2.exportersindia.com/product_images/bc-small/dir_87/2587706/cashmilon-check-shirts-2376823.jpg"
+                }
+            ]
+        },
+        {
+            "id":"jeans",
+            "name":"Jeans",
+            "products":[
+                {
+                    "id":"jeans-a",
+                    "name":"Jeans A",
+                    "image":"http://www.wigglestatic.com/product-media/100287746/organic_jean_sf-m-152-indigo%20f.jpg?w=200&h=200&a=7"
+                },
+                {
+                    "id":"jeans-b",
+                    "name":"Jeans B",
+                    "image":"http://www.freepngimg.com/thumb/jeans/8-2-jeans-png-image-thumb.png"
+                },
+                {
+                    "id":"jeans-c",
+                    "name":"Jeans C",
+                    "image":"https://img2.exportersindia.com/product_images/bc-small/dir_61/1805995/branded-jeans-2018730.jpeg"
+                },
+                {
+                    "id":"jeans-d",
+                    "name":"Jeans D",
+                    "image":"https://d2ul0w83gls0j4.cloudfront.net/products/10/200/1015039.jpg"
+                }
+            ]
+        },
+        {
+            "id":"tshirts",
+            "name":"T-Shirts",
+            "products":[
+                {
+                    "id":"tshirt-a",
+                    "name":"T Shirt A",
+                    "image":"http://www.sstshirts.in/images/ser2.png"
+                },
+                {
+                    "id":"tshirt-b",
+                    "name":"T Shirt B",
+                    "image":"https://4.imimg.com/data4/WW/PI/MY-7882583/sports-t-shirts-250x250.jpg"
+                },
+                {
+                    "id":"tshirt-c",
+                    "name":"T Shirt C",
+                    "image":"https://img2.exportersindia.com/product_images/bc-small/dir_107/3188945/ladies-t-shirts-1721296.jpg"
+                },
+                {
+                    "id":"tshirt-d",
+                    "name":"T Shirt D",
+                    "image":"https://4.imimg.com/data4/XU/JT/MY-11027963/mens-casual-t-shirt-250x250.jpg"
+                }
+            ]
+        },
+        {
+            "id":"shorts",
+            "name":"Shorts",
+            "products":[
+                {
+                    "id":"shorts-a",
+                    "name":"Shorts A",
+                    "image":"https://bonobos-prod-s3.imgix.net/products/43441/original/Bottoms_Shorts_19441_GYK74_category.jpg?auto=format%2Ccompress&dpr=1&q=75&crop=false&fit=clip&w=200&h=1"
+                },
+                {
+                    "id":"shorts-b",
+                    "name":"Shorts B",
+                    "image":"http://images.eastbay.com/pi/31390010/large/nike-elite-stripe-shorts-mens"
+                },
+                {
+                    "id":"shorts-c",
+                    "name":"Shorts C",
+                    "image":"https://images.footlocker.com/pi/36277852/large/nike-gx-shorts-mens"
+                },
+                {
+                    "id":"shorts-d",
+                    "name":"Shorts D",
+                    "image":"http://media.supercheapauto.com.au/sports/images/thumbs/51914201-thumb.jpg"
+                }
+            ]
+        }
     ],
     "sliderImages":[
         {"id":1,"src":"https://s-media-cache-ak0.pinimg.com/originals/6c/b5/a2/6cb5a29be64d6dc8d677b73a9bfd703c.jpg"},
