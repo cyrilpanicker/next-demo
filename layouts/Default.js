@@ -1,28 +1,39 @@
 import { Component } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import NProgress from 'nprogress';
 import Router from 'next/router';
-import Header from '../components/Header';
-
-const layoutStyle = {
-    margin:20,
-    padding:20,
-    border:'1px solid black'
-};
+import SideMenu from '../components/SideMenu';
 
 NProgress.configure({ showSpinner: false });
 Router.onRouteChangeStart = () => NProgress.start();
 Router.onRouteChangeComplete = () => NProgress.done();
 Router.onRouteChangeError = () => NProgress.done();
 
-const DefaultLayout = props => (
-    <div style={layoutStyle}>
-        <Head>
-            <link rel='stylesheet' type='text/css' href='/static/styles/nprogress.css' />
-        </Head>
-        <Header></Header>
-        {props.children}
-    </div>
-);
+class DefaultLayout extends React.Component{
+    render(){
+        return (
+            <div>
+                <Head>
+                    <link rel='stylesheet' href='/static/styles/reset.css' />
+                    <link rel='stylesheet' href='/static/styles/main.css' />
+                    <link rel='stylesheet' href='/static/styles/nprogress.css' />
+                </Head>
+                <SideMenu categories={this.props.categories}></SideMenu>
+                <div className="content-container">
+                    {this.props.children}
+                </div>
+                <style jsx>{`
+                    .content-container{
+                        float: left;
+                        width: 83vw;
+                        height: 100vh;
+                        overflow: hidden;
+                    }
+                `}</style>
+            </div>
+        );
+    }
+}
 
 export default DefaultLayout;

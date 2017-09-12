@@ -1,13 +1,11 @@
 import React from 'react';
-import {Link} from '../routes';
 import axios from 'axios';
 import DefaultLayout from '../layouts/Default';
+import {Link} from '../routes';
 
-import Slider from '../components/Slider';
-
-class Index extends React.Component{
+class WishList extends React.Component{
     static getInitialProps(context){
-        return axios.get('http://localhost:8080/api/home').then(
+        return axios.get('http://localhost:8080/api/wishlist').then(
             response => {
                 return {
                     data:response.data,
@@ -25,10 +23,13 @@ class Index extends React.Component{
     render(){
         return (
             <DefaultLayout categories={this.props.data.categories}>
-                <Slider images={this.props.data.images}></Slider>
+                <h2>WishList</h2>
+                <Link route="/">
+                    <a>Home</a>
+                </Link>
             </DefaultLayout>
         );
     }
 }
 
-export default Index;
+export default WishList;

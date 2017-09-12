@@ -1,0 +1,15 @@
+{
+    "categories":[
+        {"id":"shirts","name":"Shirts"},
+        {"id":"jeans","name":"Jeans"},
+        {"id":"tshirts","name":"T-Shirts"},
+        {"id":"shorts","name":"Shorts"}
+    ],
+    "sliderImages":[
+        {"id":1,"src":"https://s-media-cache-ak0.pinimg.com/originals/6c/b5/a2/6cb5a29be64d6dc8d677b73a9bfd703c.jpg"},
+        {"id":2,"src":"https://i.pinimg.com/originals/d5/dc/5f/d5dc5f26a5bda5a780994b586d59e9d5.jpg"},
+        {"id":3,"src":"https://i.pinimg.com/originals/24/7f/c6/247fc6c18e7c6805b69aee49db369fc9.jpg"},
+        {"id":4,"src":"https://s-media-cache-ak0.pinimg.com/originals/74/a2/b6/74a2b6ad7f929af783371e283c5b6389.jpg"},
+        {"id":5,"src":"http://www.hdwallpapers3d.com/wp-content/uploads/2013/05/desktop-purple-abstract-wallpaper.jpg"}
+    ]
+}
