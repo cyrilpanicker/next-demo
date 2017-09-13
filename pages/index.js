@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from '../routes';
+import Error from 'next/error';
 import axios from 'axios';
 import DefaultLayout from '../layouts/Default';
 
@@ -23,11 +24,15 @@ class Index extends React.Component{
         );
     }
     render(){
-        return (
-            <DefaultLayout categories={this.props.data.categories}>
-                <Slider images={this.props.data.images}></Slider>
-            </DefaultLayout>
-        );
+        if(this.props.status != 200){
+            return <Error statusCode={this.props.status} />
+        }else{
+            return (
+                <DefaultLayout categories={this.props.data.categories}>
+                    <Slider images={this.props.data.images}></Slider>
+                </DefaultLayout>
+            );
+        }
     }
 }
 

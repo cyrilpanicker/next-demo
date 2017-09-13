@@ -1,11 +1,16 @@
 const { Router } = require('express');
 const mockData = require('./mockData.json');
 
+const products = mockData.categories.reduce((result,category) => {
+    category.products.forEach(product => result.push(product));
+    return result;
+},[]);
+
 const router = Router();
 
-router.get('/categories/:id',function(request,response){
-    const categoryResults = mockData.categories.filter(category => category.id == request.params['id']);
-    if(!categoryResults.length){
+router.get('/products/:id',function(request,response){
+    const productResults = products.filter(product => product.id == request.params['id']);
+    if(!productResults.length){
         response.status(400).send();
     }else{
         response.send({
@@ -15,7 +20,7 @@ router.get('/categories/:id',function(request,response){
                     name:category.name
                 };
             }),
-            selectedCategory:categoryResults[0]
+            selectedProduct:productResults[0]
         });
     }
 });
