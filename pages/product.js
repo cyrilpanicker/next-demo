@@ -3,10 +3,11 @@ import axios from 'axios';
 import {Link} from '../routes';
 import DefaultLayout from '../layouts/Default';
 import ProductItem from '../components/ProductItem';
+import {proxyApiBasePath,proxyApiUrls} from '../config.js';
 
 class Product extends React.Component{
     static getInitialProps(context){
-        return axios.get('http://localhost:8080/api/products/'+context.query.productId).then(
+        return axios.get(proxyApiBasePath + proxyApiUrls['products'] + context.query.productId).then(
             response => {
                 return {
                     data:response.data,

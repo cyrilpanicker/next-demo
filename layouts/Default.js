@@ -16,7 +16,6 @@ class DefaultLayout extends React.Component{
             <div>
                 <Head>
                     <link rel='stylesheet' href='/static/styles/reset.css' />
-                    <link rel='stylesheet' href='/static/styles/main.css' />
                     <link rel='stylesheet' href='/static/styles/nprogress.css' />
                 </Head>
                 <SideMenu categories={this.props.categories}></SideMenu>

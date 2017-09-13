@@ -6,9 +6,11 @@ import DefaultLayout from '../layouts/Default';
 
 import Slider from '../components/Slider';
 
+import {proxyApiBasePath,proxyApiUrls} from '../config.js';
+
 class Index extends React.Component{
     static getInitialProps(context){
-        return axios.get('http://localhost:8080/api/home').then(
+        return axios.get(proxyApiBasePath + proxyApiUrls['home']).then(
             response => {
                 return {
                     data:response.data,

@@ -4,10 +4,11 @@ import {Link} from '../routes';
 import Error from 'next/error';
 import DefaultLayout from '../layouts/Default';
 import ProductItem from '../components/ProductItem';
+import {proxyApiBasePath,proxyApiUrls} from '../config.js';
 
 class Categories extends React.Component{
     static getInitialProps(context){
-        return axios.get('http://localhost:8080/api/categories/'+context.query.categoryLevel1).then(
+        return axios.get(proxyApiBasePath + proxyApiUrls['categories'] + context.query.categoryLevel1).then(
             response => {
                 return {
                     data:response.data,

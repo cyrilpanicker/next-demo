@@ -2,10 +2,11 @@ import React from 'react';
 import axios from 'axios';
 import DefaultLayout from '../layouts/Default';
 import {Link} from '../routes';
+import {proxyApiBasePath,proxyApiUrls} from '../config.js';
 
 class WishList extends React.Component{
     static getInitialProps(context){
-        return axios.get('http://localhost:8080/api/wishlist').then(
+        return axios.get(proxyApiBasePath + proxyApiUrls['wishlist']).then(
             response => {
                 return {
                     data:response.data,
